@@ -35,6 +35,7 @@ rm -f %{buildroot}%{_datadir}/doc/gperf.html
 
 
 %files
+%license COPYING
 %defattr(-,root,root,-)
 %doc NEWS README doc/gperf.html
 %doc %{_mandir}/man1/gperf.1*
