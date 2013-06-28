@@ -6,6 +6,7 @@ Summary:        A perfect hash function generator
 Url:            http://www.gnu.org/software/gperf/
 Group:          Development/Tools
 Source0:        ftp://ftp.gnu.org/pub/gnu/%{name}/%{name}-%{version}.tar.gz
+Source1001: 	gperf.manifest
 BuildRequires:  gcc-c++
 
 %description
@@ -17,6 +18,7 @@ a single string comparison only.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 
 %build
@@ -35,6 +37,7 @@ rm -f %{buildroot}%{_datadir}/doc/gperf.html
 
 
 %files
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root,-)
 %doc NEWS README doc/gperf.html
